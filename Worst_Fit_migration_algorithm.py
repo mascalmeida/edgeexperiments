@@ -43,7 +43,7 @@ def my_algorithm(parameters):
 
             edge_servers = sorted(
                 EdgeServer.all(),
-                key=lambda s: ((s.cpu - s.cpu_demand) * (s.memory - s.memory_demand) * (s.disk - s.disk_demand))/3#((s.cpu - s.cpu_demand) * (s.memory - s.memory_demand) * (s.disk - s.disk_demand)) ** (1 / 3),
+                key=lambda s: ((s.cpu - s.cpu_demand) * (s.memory - s.memory_demand) * (s.disk - s.disk_demand)) ** (1 / 3),
                 reverse=True,
             )
 
